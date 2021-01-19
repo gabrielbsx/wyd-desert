@@ -1,21 +1,21 @@
 <?= $this->extend('dashboard/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div  class="Right-side-news">
+    <div style="margin:10px;" class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>A</span>lteração de senha
             </div>
         </div>
         <form method="POST" action="<?= base_url('auth/alterpass') ?>" id="loginForm">
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="password" id="emailType" name="oldpassword" placeholder="Senha antiga" />
+                <input style="border: 1px solid gray;padding:10px;" type="password" id="emailType" name="oldpassword" placeholder="Senha antiga" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="password" id="emailType" name="password" placeholder="Nova senha" />
+                <input style="border: 1px solid gray;padding:10px;" type="password" id="emailType" name="password" placeholder="Nova senha" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="password" id="emailType" name="password_confirm" placeholder="Repetir nova senha" />
+                <input style="border: 1px solid gray;padding:10px;" type="password" id="emailType" name="password_confirm" placeholder="Repetir nova senha" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
                 <?php if (isset($recaptcha)) : ?>
@@ -32,5 +32,5 @@
             </div>
         </form>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

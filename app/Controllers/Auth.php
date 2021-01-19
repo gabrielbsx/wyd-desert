@@ -23,6 +23,7 @@ use Picpay\Seller;
 use Picpay\Request\PaymentRequest;
 use Picpay\Exception\RequestException;
 use App\Libraries\Mob;
+use App\Libraries\Mob7662;
 
 class Auth extends BaseController
 {
@@ -252,10 +253,10 @@ class Auth extends BaseController
                     $guildmark = $this->request->getFile('guildmark');
                     if ($guildmark->getClientMimeType() == 'image/bmp' && $guildmark->getClientExtension() == 'bmp') {
                         if ($guildmark->getSize() < 1024 && $guildmark->getSize() > 0) {
-                            $mob = json_decode($this->mob(), true);
-                            if (count($mob) > 0) {
-                                foreach ($mob as $key => $value) {
-                                    if ($guildid == $value['guildid']) {
+                            //$mob = json_decode($this->mob(), true);
+                            //if (count($mob) > 0) {
+                                //foreach ($mob as $key => $value) {
+                                    //if ($guildid == $value['guildid']) {
                                         if ($guildmark->isValid() && !$guildmark->hasMoved()) {
                                             $name = 'b0' . (1000000 + $guildid) . '.bmp';
                                             if ($guildmark->move('../public/img_guilds/', $name)) {
@@ -263,10 +264,10 @@ class Auth extends BaseController
                                                 return redirect()->to(base_url('dashboard/guildmark'))->with($this->rettype, $this->data);
                                             } else $this->data['error'] = 'Não foi possível enviar a guildmark!';
                                         } else $this->data['error'] = 'Guildmark inválida!';
-                                    }
-                                }
-                                $this->data['error'] = 'Você não é líder da guild id informada!';
-                            } else $this->data['error'] = 'Você não é líder de guild!';
+                                    //}
+                                //}
+                                //$this->data['error'] = 'Você não é líder da guild id informada!';
+                            //} else $this->data['error'] = 'Você não é líder de guild!';
                         } else $this->data['error'] = 'Tamanho não deve ultrapassar 1024kb!';
                     } else $this->data['error'] = 'Apenas imagem do tipo BMP!';
                 } else $this->data['error'] = 'Recaptcha inválido!';
@@ -636,7 +637,7 @@ class Auth extends BaseController
                     $data['id_user'] = session()->get('login')['id'];
                     $data['status'] = 0;
                     if ($ticket->save($data)) {
-                        $this->data['success'] = 'Notícia cadastrada com sucesso!';
+                        $this->data['success'] = 'Ticket enviado com sucesso!';
                     } else $this->data['error'] = implode("<div style=\"margin:5px 0;\"></div>", $ticket->errors());
                     return redirect()->to(base_url('dashboard/createticket'))->with($this->rettype, $this->data);
                 } else $this->data['error'] = 'Recaptcha inválido!';

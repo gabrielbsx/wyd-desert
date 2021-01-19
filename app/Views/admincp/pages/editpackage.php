@@ -1,9 +1,9 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>E</span>ditor de pacotes
             </div>
         </div>
@@ -12,16 +12,16 @@
                 <?php if (isset($package)) : ?>
                     <form id="login_form" class="login-form block-p" method="POST" action="<?= base_url('auth/editpackage') ?>">
                         <div class="block" style="margin:10px;text-align:center;">
-                            <input type="text" name="name" value="<?= $package['name'] ?>">
+                            <input style="padding: 10px; border: 1px solid gray;" type="text" name="name" value="<?= $package['name'] ?>">
                         </div>
                         <div class="block" style="margin:10px;text-align:center;">
-                            <input type="number" name="value" value="<?= $package['value'] ?>">
+                            <input style="padding: 10px; border: 1px solid gray;" type="number" name="value" value="<?= $package['value'] ?>">
                         </div>
                         <div class="block" style="margin:10px;text-align:center;">
-                            <input type="number" name="donate" value="<?= $package['donate'] ?>">
+                            <input style="padding: 10px; border: 1px solid gray;" type="number" name="donate" value="<?= $package['donate'] ?>">
                         </div>
                         <div class="block" style="margin:10px;text-align:center;">
-                            <input type="number" name="bonus" value="<?= $package['bonus'] ?>">
+                            <input style="padding: 10px; border: 1px solid gray;" type="number" name="bonus" value="<?= $package['bonus'] ?>">
                         </div>
                         <input type="hidden" name="id" value="<?= $package['id'] ?>">
                         <div class="block" style="margin:10px;text-align:center;">
@@ -45,7 +45,7 @@
     </div>
     <div class="news-p" style="padding:10px;">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>E</span>ditor de Pacotes
             </div>
         </div>
@@ -65,10 +65,10 @@
                                 </span>
                             </div>
                             <div style="padding: 10px;text-align:center;margin:0 auto;">
-                                <a style="background-color:rgb(55, 55, 155);padding:10px 20px;margin:10px;" href="<?= base_url('admin/edititem/' . $value['id']) ?>">
+                                <a style="background-color:rgb(55, 55, 155);padding:10px 20px;margin:10px; color: white;" href="<?= base_url('admin/edititem/' . $value['id']) ?>">
                                     Alterar item
                                 </a>
-                                <a style="background-color:rgb(155, 55, 55);padding:10px 20px;margin:10px;" href="<?= base_url('auth/delitem/' . $value['id']) ?>">
+                                <a style="background-color:rgb(155, 55, 55);padding:10px 20px;margin:10px; color: white;" href="<?= base_url('auth/delitem/' . $value['id']) ?>">
                                     Deletar item
                                 </a>
                             </div>
@@ -78,5 +78,5 @@
             </div>
         </div>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

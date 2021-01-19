@@ -29,15 +29,15 @@ $translate = [
     'guildmark' => 'Guildmark'
 ];
 ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div style="font-size:17pt;" class="news-title">
                 <span>R</span>anking
             </div>
         </div>
-        <div class="last-more-fon">
-            <div id="content" style="padding:20px;">
+        <div class="news-wrap" style="padding:10px; margin: 0 auto;">
+            <div style="font-size:12pt;" id="content" style="padding:20px;">
                 <?php if (isset($ranking_paginate) && is_array($ranking_paginate)) : ?>
                     <table class="table table-dark">
                         <thead>
@@ -90,5 +90,5 @@ $translate = [
             <?= $ranking_pager->links('ranking', 'pagination') ?>
         <?php endif; ?>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

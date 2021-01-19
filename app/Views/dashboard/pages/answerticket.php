@@ -1,9 +1,9 @@
 <?= $this->extend('dashboard/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news" style="padding:10px;">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>S</span>uporte
             </div>
         </div>
@@ -11,7 +11,7 @@
         <?php if (isset($ticket)) : ?>
             <div class="last-more-fon">
                 <div id="content">
-                    <div style="padding:10px; text-align:center;background-color: rgba(155, 155, 155, 0.2);margin:10px;color:white;border-bottom: 1px solid gray;">
+                    <div style="padding:10px; text-align:center;background-color: rgba(155, 155, 155, 1);margin:10px;color:white;border-bottom: 1px solid gray;">
                         <?= $ticket['title'] ?> | por: <?= $ticket['username'] ?>
                     </div>
                     <div class="last-more-fon" style="padding:10px; text-align:center;margin:10px;">
@@ -25,7 +25,7 @@
                 <?php foreach ($answers_paginate as $key => $value) : ?>
                     <div class="last-more-fon">
                         <div id="content">
-                            <div style="padding:10px; text-align:center;background-color: rgba(155, 155, 155, 0.2);margin:10px;color:white;border-bottom: 1px solid gray;">
+                            <div style="padding:10px; text-align:center;background-color: rgba(155, 155, 155, 1 );margin:10px;color:white;border-bottom: 1px solid gray;">
                                 <?= $value['access'] == 3 ? 'Administração' : $value['username'] ?>
                             </div>
                             <div class="last-more-fon" style="padding:10px; text-align:center;margin:10px;">
@@ -66,7 +66,7 @@
                                 </div>
                                 <div style="text-align:center;margin: 0 auto;" class="login-button2">
                                     <button type="submit">
-                                        <span class="text"> Response </span>
+                                        <span class="text"> Responder </span>
                                     </button>
                                 </div>
                             </form>
@@ -104,5 +104,5 @@
             </div>
         <?php endif; ?>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

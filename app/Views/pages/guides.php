@@ -1,16 +1,16 @@
 <?= $this->extend('layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <h1 style="font-size:18pt;" class="news-title">
                 <span>G</span>uia do Jogo
-            </div>
+            </h1>
         </div>
-        <div class="last-more-fon">
+        <div style="font-size:12pt;padding:10px;" class="news-wrap" style="padding:20px;">
             <?php foreach ($guides as $key => $value) : ?>
-                <div style="display:inline-block;width:100%;background-color:rgb(55,55,55);margin-top: 10px;">
-                    <div style="width:100%;padding:10px;text-align:center;background-color:rgb(25,25,25);">
+                <div style="display:inline-block;background-color:rgb(55,55,55);margin-top: 10px;">
+                    <div style="padding:10px;text-align:center;background-color:rgb(25,25,25);color:white;">
                         <?= $value['name'] ?>
                     </div>
                     <div style="padding:20px;display:inline-block;">
@@ -18,7 +18,7 @@
                             <?php if (count($value['articles']) > 0) : ?>
                                 <?php foreach ($value['articles'] as $key2 => $value2) : ?>
                                     <div>
-                                        <a style="padding: 10px 20px; background-color:rgb(25,25,25);margin:5px;" href="<?= base_url('/site/article/' . $value2['id']) ?>">
+                                        <a style="padding: 10px 20px; background-color:rgb(25,25,25);margin:5px;color:white;" href="<?= base_url('/site/article/' . $value2['id']) ?>">
                                             <?= $value2['title'] ?>
                                         </a>
                                     </div>
@@ -34,5 +34,5 @@
             <?php endforeach; ?>
         </div>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

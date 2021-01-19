@@ -33,7 +33,7 @@ class Mob7662
     public function getNumeric()
     {
         $pass = "";
-        for ($i = 202; $i <= 208 and $this->account[$i] != "00"; $i++)
+        for ($i = 188; $i <= 194 and $this->account[$i] != "00"; $i++)
             $pass .= hex2bin($this->account[$i]);
         return (is_numeric($pass)
             ? $pass : "Não definido");

@@ -1,24 +1,24 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>S</span>istema de Pacote
             </div>
         </div>
         <form method="POST" action="<?= base_url('auth/createpackage') ?>" id="loginForm">
             <div class="block" style="margin:10px;text-align:center;">
-                <input id="name" type="text" name="name" placeholder="Nome" />
+                <input style="border: 1px solid gray; padding: 10px;" id="name" type="text" name="name" placeholder="Nome" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input id="title" type="text" name="value" placeholder="Valor de doação em R$" />
+                <input style="border: 1px solid gray; padding: 10px;" id="title" type="text" name="value" placeholder="Valor de doação em R$" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input id="donate" type="text" name="donate" placeholder="Quantidade de donate" />
+                <input style="border: 1px solid gray; padding: 10px;" id="donate" type="text" name="donate" placeholder="Quantidade de donate" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input id="bonus" type="text" name="bonus" placeholder="Bônus em [%]" />
+                <input style="border: 1px solid gray; padding: 10px;" id="bonus" type="text" name="bonus" placeholder="Bônus em [%]" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
                 <?php if (isset($recaptcha)) : ?>
@@ -35,5 +35,5 @@
             </div>
         </form>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

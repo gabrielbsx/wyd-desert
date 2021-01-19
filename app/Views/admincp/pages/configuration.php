@@ -1,9 +1,9 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news" style="padding:10px;">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>C</span>onfigurações
             </div>
         </div>
@@ -34,5 +34,5 @@
 
         <?php endif; ?>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

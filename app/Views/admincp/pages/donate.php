@@ -1,16 +1,16 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>S</span>istema de Doação
             </div>
         </div>
-        <div class="last-more-fon">
+        <div class="news-block" style="padding:10px;">
             <div id="content">
                 <div style="margin:10px 0;text-align:center;">
-                    <a href="<?= base_url('admin/packagedonate') ?>" style="background-color:rgb(55,55,55);padding:10px 20px;display:block;text-align:center;margin:0 auto;">Adicionar novo pacote</a>
+                    <a href="<?= base_url('admin/packagedonate') ?>" style="background-color:rgb(55,55,55);padding:10px 20px;display:block;text-align:center;margin:0 auto;color:white;">Adicionar novo pacote</a>
                 </div>
                 <?php if ($paginate_package) : ?>
                     <?php foreach ($paginate_package as $key => $value) : ?>
@@ -20,13 +20,13 @@
                                     <?= $value['name'] ?>
                                 </span>
                                 <div style="display:flex;margin-left:auto;">
-                                    <a href="<?= base_url('admin/additem/' . $value['id']) ?>" style="background-color:rgb(25,25,75);padding:10px 20px;">
+                                    <a href="<?= base_url('admin/additem/' . $value['id']) ?>" style="background-color:rgb(25,25,75);padding:10px 20px;color:white;">
                                         Adicionar Item
                                     </a>
-                                    <a href="<?= base_url('admin/editpackage/' . $value['id']) ?>" style="background-color:rgb(25,75,25);padding:10px 20px;">
+                                    <a href="<?= base_url('admin/editpackage/' . $value['id']) ?>" style="background-color:rgb(25,75,25);padding:10px 20px;color:white;">
                                         Editar
                                     </a>
-                                    <a href="<?= base_url('auth/delpackage/' . $value['id']) ?>" style="background-color:rgb(75,25,25);padding:10px 20px;">
+                                    <a href="<?= base_url('auth/delpackage/' . $value['id']) ?>" style="background-color:rgb(75,25,25);padding:10px 20px;color:white;">
                                         Deletar
                                     </a>
                                 </div>
@@ -42,5 +42,5 @@
             </div>
         </div>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

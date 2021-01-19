@@ -93,7 +93,7 @@ class Dashboard extends BaseController
     {
         if (session()->has('login')) {
             $tickets = new Tickets();
-            $this->data['paginate_tickets'] = session()->get('login')['access'] == 3 ? $tickets->paginate(5, 'tickets') : $tickets->where('id_user', session()->get('login')['id'])->paginate(5, 'tickets');
+            $this->data['paginate_tickets'] = session()->get('login')['access'] == 3 ? $tickets->orderBy('id', 'DESC')->paginate(5, 'tickets') : $tickets->orderBy('id', 'DESC')->where('id_user', session()->get('login')['id'])->paginate(5, 'tickets');
             $this->data['pager_tickets'] = $tickets->pager;
             return view('dashboard/pages/tickets', $this->data);
         }

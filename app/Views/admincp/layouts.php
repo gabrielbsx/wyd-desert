@@ -3,22 +3,22 @@
 <?= view('template/head') ?>
 
 <body>
-    <div class="body-top">
-        <div class="body-bottom">
-            <?= view('template/header') ?>
-            <div class="wrapper">
-                <?= view('template/navbar') ?>
+    <?= view('template/header') ?>
+    <div class="header-bottom-main">
+        <div class="header-bottom-rea">
+        </div>
+    </div>
+    <div class="main-area">
+        <div class="container">
+            <div class="news-area">
+                <?php /* view('template/blocks') */?>
+                <?= view('template/aside') ?>
                 <?= view('template/message') ?>
-                <div class="container">
-                    <div class="c-container">
-                        <?= $this->renderSection('page') ?>
-                        <?= view('template/aside') ?>
-                    </div>
-                </div>
-                <?= view('template/footer') ?>
+                <?= $this->renderSection('page') ?>
             </div>
         </div>
     </div>
+    <?= view('template/footer') ?>
     <?= view('template/scripts') ?>
 </body>
 

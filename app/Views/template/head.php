@@ -32,6 +32,11 @@
 		gtag('config', 'UA-59564134-9');
 	</script>
 	<style>
+		p img {
+			width: 100%;
+			object-fit: contain;
+			overflow: hidden;
+		}
 		.news-warp .ipsEmoji,
 		.news-txt img {
 			display: none;
@@ -52,7 +57,7 @@
 		}
 
 		.raidpop-content {
-			background: #1c0b07 url('img/discord-pop-up.html') center no-repeat;
+			background: #1c0b07 url('<?= base_url('img/discord-pop-up.html') ?>') center no-repeat;
 			margin: auto;
 			padding: 20px;
 			border: 1px solid #ff3131;

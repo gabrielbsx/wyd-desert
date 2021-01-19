@@ -12,7 +12,7 @@ $pager->setSurroundCount(2);
         <td>
             <div id="pagination">
                 <ul>
-                    <li>
+                    <li style="background: rgba(0, 0, 0, 0.7);padding:10px;">
                         <?php if ($pager->hasPrevious()) : ?>
                             <a id="next" aria-label="<?= lang('Pager.previous') ?>" href="<?= $pager->getPrevious() ?>"><<</a>
                         <?php endif; ?>

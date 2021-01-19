@@ -1,15 +1,15 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>E</span>ditar artigo do guia
             </div>
         </div>
         <form method="POST" id="loginForm" action="<?= base_url('auth/editguide') ?>">
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="text" name="title" value="<?= $article['title'] ?>">
+                <input type="text" style="border: 1px solid gray;padding:10px;" name="title" value="<?= $article['title'] ?>">
             </div>
             <div class="block" style="margin:10px;text-align:center;">
                 <textarea name="article" class="editor"><?= $article['article'] ?></textarea>
@@ -30,5 +30,5 @@
             </div>
         </form>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

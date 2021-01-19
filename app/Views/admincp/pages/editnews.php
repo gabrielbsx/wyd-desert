@@ -1,18 +1,18 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>E</span>ditor de Notícias
             </div>
         </div>
-        <div class="last-more-fon">
+        <div class="last-more-fon" style="padding:10px;">
             <div id="content">
                 <?php if (isset($news)) : ?>
                     <form id="login_form" class="login-form block-p" method="POST" action="<?= base_url('auth/editnews') ?>">
                         <div class="block" style="margin:10px;text-align:center;">
-                            <input type="text" name="title" value="<?= $news['title'] ?>" />
+                            <input style="padding:10px; border: 1px solid gray;" type="text" name="title" value="<?= $news['title'] ?>" />
                         </div>
                         <textarea class="editor" name="content"><?= $news['content'] ?></textarea>
                         <div class="block" style="margin:10px;text-align:center;">
@@ -47,5 +47,5 @@
             </div>
         </div>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

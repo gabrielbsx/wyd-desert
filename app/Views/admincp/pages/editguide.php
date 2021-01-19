@@ -1,16 +1,16 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>E</span>ditor de guias
             </div>
         </div>
         <?php if (isset($guide)) : ?>
             <form method="POST" id="loginForm" action="<?= base_url('auth/editguide') ?>">
                 <div class="block" style="margin:10px;text-align:center;">
-                    <input id="name" type="text" name="name" placeholder="Nome do guia" value="<?= $guide['name'] ?>" required />
+                    <input style="border: 1px solid gray; padding:10px;" id="name" type="text" name="name" placeholder="Nome do guia" value="<?= $guide['name'] ?>" required />
                 </div>
                 <input type="hidden" name="id" value="<?= $guide['id'] ?>">
                 <div class="block" style="margin:10px;text-align:center;">
@@ -34,9 +34,9 @@
         <?php endif; ?>
     </div>
 
-    <div class="news-p">
+    <div class="news-p" style="padding:10px;">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>E</span>ditor de artigos do guia
             </div>
         </div>
@@ -48,10 +48,10 @@
                             <?= $value['title'] ?>
                         </span>
                         <div style="display:flex;margin-left:auto;">
-                            <a href="<?= base_url('admin/editarticleguide/' . $value['id']) ?>" style="background-color:rgb(25,25,75);padding:10px 20px;">
+                            <a href="<?= base_url('admin/editarticleguide/' . $value['id']) ?>" style="background-color:rgb(25,25,75);padding:10px 20px;color:White;">
                                 Alterar Artigo
                             </a>
-                            <a href="<?= base_url('auth/delarticleguide/' . $value['id']) ?>" style="background-color:rgb(75,25,25);padding:10px 20px;">
+                            <a href="<?= base_url('auth/delarticleguide/' . $value['id']) ?>" style="background-color:rgb(75,25,25);padding:10px 20px;color:White;">
                                 Deletar Artigo
                             </a>
                         </div>

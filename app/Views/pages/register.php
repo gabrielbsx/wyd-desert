@@ -1,24 +1,24 @@
 <?= $this->extend('layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div style="font-size:17pt;" class="news-title">
                 <span>C</span>adastrar
             </div>
         </div>
-        <form method="POST" action="<?= base_url('auth/register') ?>" id="loginForm">
+        <form style="font-size:13pt;" method="POST" action="<?= base_url('auth/register') ?>" id="loginForm">
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="text" id="emailType" name="username" placeholder="Usuário" />
+                <input style="border: 1px solid gray;" type="text" id="emailType" name="username" placeholder="Usuário" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="email" id="emailType" name="email" placeholder="Email" />
+                <input style="border: 1px solid gray;" type="email" id="emailType" name="email" placeholder="Email" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="password" id="emailType" name="password" placeholder="Senha" />
+                <input style="border: 1px solid gray;" type="password" id="emailType" name="password" placeholder="Senha" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="password" id="emailType" name="password_confirm" placeholder="Confirmar senha" />
+                <input style="border: 1px solid gray;" type="password" id="emailType" name="password_confirm" placeholder="Confirmar senha" />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
                 <?php if (isset($recaptcha)) : ?>
@@ -35,5 +35,5 @@
             </div>
         </form>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

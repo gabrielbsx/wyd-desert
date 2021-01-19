@@ -1,13 +1,13 @@
 <?= $this->extend('layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
-                <span>G</span>uia do Jogo
+            <div style="font-size:17pt;" class="news-title">
+                Droplsit
             </div>
         </div>
-        <div class="last-more-fon" style="padding:20px;background-color:white;">
+        <div class="news-wrap" style="padding:20px;">
             <?php if ($droplist) : ?>
                 <table style="background-color:rgba(55, 55, 55, 0.5);margin: 0 auto;text-align:center;" class="dataTable table" id="dtBasicExample">
                     <thead>
@@ -31,5 +31,5 @@
             <?php endif; ?>
         </div>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

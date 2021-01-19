@@ -1,27 +1,29 @@
 <?= $this->extend('layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
-        <?php if (isset($news)) : ?>
-            <div class="block-title">
-                <div class="title">
-                    <span><?= $news['title'][0] ?></span><?= substr($news['title'], 1) ?>
+<div class="Right-side-news">
+    <div class="letest-news">
+        <div class="letest-news-warp">
+            <?php if (isset($news)) : ?>
+                <div class="news-title">
+                    <h1><span><?= $news['title'] ?></span></h1>
                 </div>
-            </div>
-            <div class="last-more-fon">
-                <div id="content" style="padding:20px;">
-                    <p style="text-align:center">
-                        <?= $news['content'] ?>
-                    </p>
+                <div class="news-warp">
                 </div>
-            </div>
-        <?php else : ?>
-            <div class="last-more-fon">
-                <div id="content" style="padding:20px;">
-                    Não há notícia cadastrada!
+                <div class="last-more-fon">
+                    <div id="content" style="padding:20px;">
+                        <p style="text-align:center">
+                            <?= $news['content'] ?>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        <?php endif; ?>
+            <?php else : ?>
+                <div class="last-more-fon">
+                    <div id="content" style="padding:20px;">
+                        Não há notícia cadastrada!
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

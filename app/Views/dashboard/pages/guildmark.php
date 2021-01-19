@@ -1,15 +1,15 @@
 <?= $this->extend('dashboard/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>E</span>nvio de guildmark
             </div>
         </div>
         <form method="POST" action="<?= base_url('auth/guildmark') ?>" id="loginForm">
             <div class="block" style="margin:10px;text-align:center;">
-                <input type="number" name="guildid" placeholder="Guild ID" required />
+                <input style="border: 1px solid gray; padding:10px;" type="number" name="guildid" placeholder="Guild ID" required />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
                 <input style="border:none;background:transparent;" type="file" accept="image/bmp" name="guildmark" required />
@@ -29,5 +29,5 @@
             </div>
         </form>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

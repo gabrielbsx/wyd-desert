@@ -1,15 +1,15 @@
 <?= $this->extend('admincp/layouts') ?>
 <?= $this->section('page') ?>
-<main class="content">
-    <div class="news-p">
+<div class="Right-side-news">
+    <div class="letest-news">
         <div class="block-title">
-            <div class="title">
+            <div class="news-title">
                 <span>C</span>riação de notícias
             </div>
         </div>
         <form method="POST" id="loginForm" action="<?= base_url('auth/createnews') ?>">
             <div class="block" style="margin:10px;text-align:center;">
-                <input id="title" type="text" name="title" placeholder="Título" required />
+                <input style="border: 1px solid gray;padding:10px;" id="title" type="text" name="title" placeholder="Título" required />
             </div>
             <div class="block" style="margin:10px;text-align:center;">
                 <textarea style="margin:10px;" name="content" class="editor"></textarea>
@@ -38,5 +38,5 @@
             </div>
         </form>
     </div>
-</main>
+</div>
 <?= $this->endSection() ?>

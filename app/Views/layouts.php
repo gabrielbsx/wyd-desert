@@ -11,9 +11,8 @@
     <div class="main-area">
         <div class="container">
             <div class="news-area">
-                <?= view('template/blocks') ?>
-                <?= view('template/message') ?>
                 <?= view('template/aside') ?>
+                <?= view('template/message') ?>
                 <?= $this->renderSection('page') ?>
             </div>
         </div>
