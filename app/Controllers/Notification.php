@@ -73,7 +73,8 @@ class Notification extends BaseController
                             $response = json_encode([
                                 'user' => $user,
                                 'donate' => $value,
-                                'item_bonus' => $items
+                                'item_bonus' => $items,
+                                'referenceId' => $payload->referenceId
                             ]);
                         }
                     }
@@ -149,7 +150,8 @@ class Notification extends BaseController
                         $response = json_encode([
                             'user' => $user,
                             'donate' => $value,
-                            'item_bonus' => $items
+                            'item_bonus' => $items,
+                            'referenceId' => $payment->external_reference
                         ]);
                     }
                 }
